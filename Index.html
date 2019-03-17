@@ -15,8 +15,8 @@ body {
 }
 
 .navbar {
-    background-color:lightgrey;
-    color:	#F3046C;
+    background-color:#F3046C;
+    color:	white;
   
     
 }
@@ -24,8 +24,9 @@ body {
 .inputBox {
 
 	width:80%;
-    background-color:lightgrey;
+    background-color:#F3046C;
     padding: 10px 30px;
+
 
     
 }
@@ -35,50 +36,63 @@ body {
 	
 }
 
+.overskrift  {
+	color:#F3046C;
+
+}
+
+
+
+
+
     </style>
   </head>
   <body>
 
-
 <!--- Fixed header --->  	
+<div>
+
 <nav class="navbar sticky-top  navbar-light">
-  <a class="navbar-brand" href="*">
-  </a>
-  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  	<img src="logo2.png" width="80" height="80">
-    <span class="navbar-toggler-icon"></span>
+
+  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  	<img  src="logo2.png" width="80" height="80">
+    <span style="color:white"> Burd Delivery Aps</span>
+    
   </button>
 
-
-  	<div class="container">
+  	<div class="container col-3">
     <h1 class="page-header">Burd Rekruttering</h1>
-   <p class="lead"></p>
+  
 
 </div>
 </nav>
 
+</div>
 
 <!--- Forløb --->
-<ul class="list-group list-group-horizontal " style="text-align:center; color:#F3046C; margin:15px 5px;">
+<ul class="list-group list-group-horizontal" style="text-align:center; color:#F3046C; margin:15px 5px;">
 
  <li class="list-group-item col-4 border-0">
-   <h1 class="">Jobsamtale</h1>
+   <h1 class="overskrift">Jobsamtale</h1>
+</li>
+
+<li class="list-group-item col-4 border-0">
+    <h1 class=" overskrift">Oplæring & Wuxus</h1>
 </li>
 <li class="list-group-item col-4 border-0">
-    <h1 class="">Oplæring & Wuxus</h1>
-</li>
-<li class="list-group-item col-4 border-0">
-      <h1 class="">Smartplan & kontrakt</h1>
+      <h1 class=" overskrift">Smartplan & kontrakt</h1>
 </li>
 </ul>
 
 <!--- Form Box --->
-<div class="d-flex col-4 justify-content-center flytBar">
- <div class="inputBox rounded " >
- <form class="">
+<div class="col-4 position-absolute">
+
+<div class="d-flex justify-content-center">
+ <div class="inputBox rounded" ondragstart="dragStart(event)" id="dragelement" draggable="true" >
+ <form class= >
 
   <div class="form-group inputForm">
-    <label for="exampleInputEmail1">Fulde navn/Full Name</label>
+    <label for="exampleInputEmail1">Fulde Navn/Full Name</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
   </div>
 
@@ -88,7 +102,7 @@ body {
   </div>
 
   <div class="form-group inputForm">
-    <label for="exampleInputPassword1">Adresse/address</label>
+    <label for="exampleInputPassword1">Adresse/Address</label>
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Fx.: Naverland 35 kld, 2600 Glostrup">
   </div>
 
@@ -108,13 +122,12 @@ body {
     <input type="Number" class="form-control col-12" id="exampleInputPassword1" placeholder="0123456789" style="width:95%">
     </div>
     <div>
-    <input type="Number" class="form-control col-12" id="exampleInputPassword1" placeholder="0123" style="width:96%">
+    <input type="Number" class="form-control col-12" id="exampleInputPassword1" placeholder="0123" style="width:97%"  >
     </div>
   </div>
 
-
   <div class="form-group">
-    <label for="exampleFormControlFile1">Billede</label>
+    <label for="exampleFormControlFile1">Billede/Picture</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
 
@@ -122,18 +135,41 @@ body {
 </form>
 </div>
 </div>
+</div>
 
+<div class="drop  border-0 position-relative justify-content-center" style="left:700px; height:600px; width:600px;" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+</div>
+<div class="drop border-0 position-relative" style="left:1300px; height:650px; width:600px; top:-600px; " ondragover="allowDrop(event)" ondrop="drop(event)">
+
+</div>
 
 <!--- Fixed footer --->
 
   <nav class="navbar fixed-bottom navbar-light">
-  <a class="navbar-brand" href="#">Burd Captain Tool</a>
+  <a class="navbar-brand" href="#" style="color:white;">Burd Captain Tool</a>
 </nav>
 
 <script type="text/javascript">
+	let id ;
 
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function dragStart(ev){
+   id=ev.target.id;
+ 
+}
+
+function drop(ev){
+ ev.target.append(document.getElementById(id));
+  
+
+ };
 
 </script>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

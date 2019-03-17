@@ -10,12 +10,15 @@
 
     <style type="text/css">
 
-
+body {
+	  font-family:"times new roman"
+}
 
 .navbar {
-	background-color:grey;
-
-
+    background-color:lightgrey;
+    color:	#F3046C;
+  
+    
 }
     	
 .inputBox {
@@ -31,11 +34,6 @@
 
 	
 }
-
-.forløb {
-	text-align:center;
-}
-
 
     </style>
   </head>
@@ -61,44 +59,60 @@
 
 
 <!--- Forløb --->
- <div class="row forløb ">
-  <div class="col-4">  	
+<ul class="list-group list-group-horizontal " style="text-align:center; color:#F3046C; margin:15px 5px;">
+
+ <li class="list-group-item col-4 border-0">
    <h1 class="">Jobsamtale</h1>
-  </div>
-   <div class="col-4">
+</li>
+<li class="list-group-item col-4 border-0">
     <h1 class="">Oplæring & Wuxus</h1>
-   </div>
-     <div class="col-4">
+</li>
+<li class="list-group-item col-4 border-0">
       <h1 class="">Smartplan & kontrakt</h1>
-     </div>
- </div>
-
-
+</li>
+</ul>
 
 <!--- Form Box --->
-<div class="d-flex col-4 justify-content-center">
+<div class="d-flex col-4 justify-content-center flytBar">
  <div class="inputBox rounded " >
- <form>
+ <form class="">
+
   <div class="form-group inputForm">
     <label for="exampleInputEmail1">Fulde navn/Full Name</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
   </div>
+
   <div class="form-group inputForm">
     <label for="exampleInputPassword1">Cpr-nr</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="101090-9999">
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="101090-9999">
   </div>
+
+  <div class="form-group inputForm">
+    <label for="exampleInputPassword1">Adresse/address</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Fx.: Naverland 35 kld, 2600 Glostrup">
+  </div>
+
   <div class="form-group inputForm">
     <label for="exampleInputPassword1">Email</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
   </div>
-  <div class="form-group inputForm">
-    <label for="exampleInputPassword1">Adresse/address</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Fx.: Naverland 35 kld, 2600 Glostrup">
-  </div>
+  
   <div class="form-group inputForm">
     <label for="exampleInputPassword1">Telefon/Phone</label>
     <input type="Number" class="form-control" id="exampleInputPassword1" placeholder="Fx.: 29 93 87 00">
   </div>
+
+  <div class="form-group inputForm row">
+    <label for="exampleInputPassword1" class="col-12">Konto/Account & Reg</label>
+    <div style="margin-left: 10px">
+    <input type="Number" class="form-control col-12" id="exampleInputPassword1" placeholder="0123456789" style="width:95%">
+    </div>
+    <div>
+    <input type="Number" class="form-control col-12" id="exampleInputPassword1" placeholder="0123" style="width:96%">
+    </div>
+  </div>
+
+
   <div class="form-group">
     <label for="exampleFormControlFile1">Billede</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
@@ -115,6 +129,11 @@
   <nav class="navbar fixed-bottom navbar-light">
   <a class="navbar-brand" href="#">Burd Captain Tool</a>
 </nav>
+
+<script type="text/javascript">
+
+
+</script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
